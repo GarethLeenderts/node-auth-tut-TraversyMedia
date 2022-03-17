@@ -3,15 +3,21 @@ import React from 'react';
 // import './App.css';
 import RegistrationForm from './Components/register.js';
 import LoginForm from './Components/login.js';
+import Home from './Components/Home.js';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 const App = () => {
 
   return (
-    <div>
-      <p>Hello</p>
-      <RegistrationForm/>
-      <LoginForm/>
-    </div>
+    <Router>
+      <Routes>
+        {/* <Route path={["/", "/home"]} element={<Home />}></Route> */}
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/home" element={<Home />}></Route>
+        <Route path="/register" element={<RegistrationForm />}></Route>
+        <Route path="/login" element={<LoginForm />}></Route>
+      </Routes>
+    </Router>
   );
 }
 
