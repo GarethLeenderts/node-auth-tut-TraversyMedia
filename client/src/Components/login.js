@@ -1,15 +1,22 @@
 import React from 'react';
 
+const serverLocation = "http://localhost:5000";
 
 const LoginForm = () => {
     return (
         <div>
             <div><h3>loginForm</h3></div>
             <div>
-                <form>
-                    <input type='text' placeholder='email'/>
-                    <input type='text' placeholder='password'/>
-                    <button>Login</button>
+                <form action={`${serverLocation}/login`} method="POST">
+                    <div>
+                        <input type='email' placeholder='email' required/>
+                    </div>
+                    <div>
+                        <input type='password' placeholder='password' required/>
+                    </div>
+                    <div>
+                        <button>Login</button>
+                    </div>
                 </form>
             </div>
             <div>
