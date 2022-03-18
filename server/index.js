@@ -1,6 +1,7 @@
 // Import libraries
 const express = require('express');
 const cors = require('cors');
+// const bodyParser = require('body-parser');
 
 // Instantiate server
 const app = express();
@@ -13,6 +14,10 @@ var corsOptions = {
 }
 
 app.use(cors(corsOptions));
+
+// Allows us to parse incoming requests with urlencoded payloads
+app.use(express.urlencoded({ extended: false }));
+// app.use(bodyParser.urlencoded({ extended: false }));  alternate implementation
 
 // Middleware END --------
 

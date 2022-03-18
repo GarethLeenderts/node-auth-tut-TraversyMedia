@@ -21,7 +21,7 @@ const RegistrationForm = () => {
                         <input type='password' placeholder='confirm password' required/>
                     </div>
                     <div>
-                        <button>Register</button>
+                        <button type="submit">Register</button>
                     </div>
                     <div>
                         <button>Clear</button>
