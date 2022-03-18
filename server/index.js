@@ -31,7 +31,7 @@ const app = express();
 // Cors Middleware
 var corsOptions = {
     origin: "http://localhost:3000",
-    methods: ["GET", "PUT", "POST", 'DELETE']
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
 }
 
 app.use(cors(corsOptions));
