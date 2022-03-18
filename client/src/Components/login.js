@@ -3,9 +3,17 @@ import React from 'react';
 const serverLocation = "http://localhost:5000";
 
 const LoginForm = () => {
+    // const renderErrorMessage = () => { 
+    //     if (messages.error) { 
+    //     return <div><h5>{messages.error}</h5></div>;
+    //     }
+    // }
+
     return (
         <div>
             <div><h3>loginForm</h3></div>
+            {/* { messages.error && <div><h5>{messages.error}</h5></div> } */}
+            {/* <renderErrorMessage /> */}
             <div>
                 <form action={`${serverLocation}/login`} method="POST">
                     <div>
