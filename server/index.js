@@ -3,6 +3,14 @@ const express = require('express');
 const cors = require('cors');
 // const bodyParser = require('body-parser');
 const bcrypt = require('bcrypt'); // password hashing library
+const passport = require('passport');
+
+
+const initializePassport = require('./passport-config.js');
+initializePassport(
+    passport, 
+    email => { return users.find(user => user.email === email) }
+);
 
 
 // going to store users in a local variable for this tutorial

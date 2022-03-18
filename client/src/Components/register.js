@@ -28,6 +28,20 @@ const RegistrationForm = () => {
                     </div>
                 </form>
             </div>
+            <div>
+                <div>
+                    <button>withGoogle</button>
+                </div>
+                <div>
+                    <button>withLinkedIn</button>
+                </div>
+                <div>
+                    <button>withFacebook</button>
+                </div>
+                <div>
+                    <button>withTwitter</button>
+                </div>
+            </div>
         </div>
     );
 };
